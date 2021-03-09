@@ -1,1 +1,1 @@
-Sitemap: https://brandonwilliams.info/fastpages-blog/sitemap.xml
+Sitemap: https://bweez.github.io/fastpages-blog/sitemap.xml
