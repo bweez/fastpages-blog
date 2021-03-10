@@ -1,1 +1,1 @@
-Sitemap: https://brandonwilliams.info/blog/sitemap.xml
+Sitemap: https://brandonwilliams.info/sitemap.xml

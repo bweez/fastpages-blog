@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://brandonwilliams.info/blog/markdown/2020/01/14/test-markdown-post.html</loc>
+<loc>https://brandonwilliams.info/markdown/2020/01/14/test-markdown-post.html</loc>
 <lastmod>2020-01-14T00:00:00-06:00</lastmod>
 </url>
 <url>
-<loc>https://brandonwilliams.info/blog/jupyter/2020/02/20/test.html</loc>
+<loc>https://brandonwilliams.info/jupyter/2020/02/20/test.html</loc>
 <lastmod>2020-02-20T00:00:00-06:00</lastmod>
 </url>
 <url>
-<loc>https://brandonwilliams.info/blog/markdown/first/2020/03/09/hello-world.html</loc>
+<loc>https://brandonwilliams.info/markdown/first/2020/03/09/hello-world.html</loc>
 <lastmod>2020-03-09T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>https://brandonwilliams.info/blog/about/</loc>
+<loc>https://brandonwilliams.info/about/</loc>
 </url>
 <url>
-<loc>https://brandonwilliams.info/blog/</loc>
+<loc>https://brandonwilliams.info/</loc>
 </url>
 <url>
-<loc>https://brandonwilliams.info/blog/search/</loc>
+<loc>https://brandonwilliams.info/search/</loc>
 </url>
 <url>
-<loc>https://brandonwilliams.info/blog/categories/</loc>
+<loc>https://brandonwilliams.info/categories/</loc>
 </url>
 </urlset>
