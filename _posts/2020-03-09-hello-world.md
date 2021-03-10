@@ -8,15 +8,17 @@ title: Hello World!
 
 # Figuring it out!
 
-Alright.  Here is my first blog post.  I am working on configuring a custom domain name.
+Alright.  Here is my first blog post.  ~~I am working on configuring a custom domain name.~~
+
+Customizing the landing page.
 
 # TODOs
 
- - [ ] Custom Domain name `brandonwilliams.info`
- - [ ] Secure traffic with https to custom domain
- - [X] Write first blog post!
- - [ ] Customize the landing page
-        - [ ] Add image of my self
-        - [ ] Customize navigation
- - [ ] Disable/Move boiler plate blogs and content
- - [ ] Rename main branch
+* [X] Custom Domain name `brandonwilliams.info`
+* [X] Secure traffic with https to custom domain
+* [X] Write first blog post!
+* [ ] Customize the landing page
+    * [ ] Add image of my self
+    * [ ] Customize navigation
+* [X] Disable/Move boiler plate blogs and content
+* [X] Rename main branch
