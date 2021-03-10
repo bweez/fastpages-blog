@@ -18,4 +18,5 @@ Alright.  Here is my first blog post.  I am working on configuring a custom doma
  - [ ] Customize the landing page
         - [ ] Add image of my self
         - [ ] Customize navigation
-- [ ] Disable/Move boiler plate blogs and content
+ - [ ] Disable/Move boiler plate blogs and content
+ - [ ] Rename main branch
