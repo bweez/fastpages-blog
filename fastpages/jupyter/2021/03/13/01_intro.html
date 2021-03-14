@@ -4,19 +4,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Your Deep Learning Journey | work-in-progress</title>
+<title>Fastai Chapter 1 | work-in-progress</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Your Deep Learning Journey" />
+<meta property="og:title" content="Fastai Chapter 1" />
+<meta name="author" content="Brandon Williams" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="A place to record my learnings and hold myself accountable." />
 <meta property="og:description" content="A place to record my learnings and hold myself accountable." />
-<link rel="canonical" href="https://brandonwilliams.info/2021/03/13/01_intro.html" />
-<meta property="og:url" content="https://brandonwilliams.info/2021/03/13/01_intro.html" />
+<link rel="canonical" href="https://brandonwilliams.info/fastpages/jupyter/2021/03/13/01_intro.html" />
+<meta property="og:url" content="https://brandonwilliams.info/fastpages/jupyter/2021/03/13/01_intro.html" />
 <meta property="og:site_name" content="work-in-progress" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-03-13T00:00:00-06:00" />
 <script type="application/ld+json">
-{"url":"https://brandonwilliams.info/2021/03/13/01_intro.html","@type":"BlogPosting","headline":"Your Deep Learning Journey","dateModified":"2021-03-13T00:00:00-06:00","datePublished":"2021-03-13T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://brandonwilliams.info/2021/03/13/01_intro.html"},"description":"A place to record my learnings and hold myself accountable.","@context":"https://schema.org"}</script>
+{"url":"https://brandonwilliams.info/fastpages/jupyter/2021/03/13/01_intro.html","@type":"BlogPosting","headline":"Fastai Chapter 1","dateModified":"2021-03-13T00:00:00-06:00","datePublished":"2021-03-13T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://brandonwilliams.info/fastpages/jupyter/2021/03/13/01_intro.html"},"author":{"@type":"Person","name":"Brandon Williams"},"description":"A place to record my learnings and hold myself accountable.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://brandonwilliams.info/feed.xml" title="work-in-progress" /><link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -71,16 +72,28 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Your Deep Learning Journey</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-03-13T00:00:00-06:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Fastai Chapter 1</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-03-13T00:00:00-06:00" itemprop="datePublished">
         Mar 13, 2021
-      </time>
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">Brandon Williams</span></span>
        • <span class="read-time" title="Estimated read time">
     
     
-      14 min read
+      15 min read
     
 </span></p>
 
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/categories/#fastpages">fastpages</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/categories/#jupyter">jupyter</a>
+        
+      
+      </p>
     
 
     
@@ -108,7 +121,56 @@ window.onload = wrap_img;
       </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <!--
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#Your-Deep-Learning-Journey">Your Deep Learning Journey </a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#Deep-Learning-Is-for-Everyone">Deep Learning Is for Everyone </a></li>
+<li class="toc-entry toc-h2"><a href="#Neural-Networks:-A-Brief-History">Neural Networks: A Brief History </a></li>
+<li class="toc-entry toc-h2"><a href="#Who-We-Are">Who We Are </a></li>
+<li class="toc-entry toc-h2"><a href="#How-to-Learn-Deep-Learning">How to Learn Deep Learning </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Your-Projects-and-Your-Mindset">Your Projects and Your Mindset </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#The-Software:-PyTorch,-fastai,-and-Jupyter-(And-Why-It-Doesn't-Matter)">The Software: PyTorch, fastai, and Jupyter (And Why It Doesn&#39;t Matter) </a></li>
+<li class="toc-entry toc-h2"><a href="#Your-First-Model">Your First Model </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Getting-a-GPU-Deep-Learning-Server">Getting a GPU Deep Learning Server </a></li>
+<li class="toc-entry toc-h3"><a href="#Running-Your-First-Notebook">Running Your First Notebook </a></li>
+<li class="toc-entry toc-h3"><a href="#Sidebar:-This-Book-Was-Written-in-Jupyter-Notebooks">Sidebar: This Book Was Written in Jupyter Notebooks </a></li>
+<li class="toc-entry toc-h3"><a href="#End-sidebar">End sidebar </a></li>
+<li class="toc-entry toc-h3"><a href="#What-Is-Machine-Learning?">What Is Machine Learning? </a></li>
+<li class="toc-entry toc-h3"><a href="#What-Is-a-Neural-Network?">What Is a Neural Network? </a></li>
+<li class="toc-entry toc-h3"><a href="#A-Bit-of-Deep-Learning-Jargon">A Bit of Deep Learning Jargon </a></li>
+<li class="toc-entry toc-h3"><a href="#Limitations-Inherent-To-Machine-Learning">Limitations Inherent To Machine Learning </a></li>
+<li class="toc-entry toc-h3"><a href="#How-Our-Image-Recognizer-Works">How Our Image Recognizer Works </a></li>
+<li class="toc-entry toc-h3"><a href="#What-Our-Image-Recognizer-Learned">What Our Image Recognizer Learned </a></li>
+<li class="toc-entry toc-h3"><a href="#Image-Recognizers-Can-Tackle-Non-Image-Tasks">Image Recognizers Can Tackle Non-Image Tasks </a></li>
+<li class="toc-entry toc-h3"><a href="#Jargon-Recap">Jargon Recap </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#Deep-Learning-Is-Not-Just-for-Image-Classification">Deep Learning Is Not Just for Image Classification </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Sidebar:-The-Order-Matters">Sidebar: The Order Matters </a></li>
+<li class="toc-entry toc-h3"><a href="#End-sidebar">End sidebar </a></li>
+<li class="toc-entry toc-h3"><a href="#Sidebar:-Datasets:-Food-for-Models">Sidebar: Datasets: Food for Models </a></li>
+<li class="toc-entry toc-h3"><a href="#End-sidebar">End sidebar </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#Validation-Sets-and-Test-Sets">Validation Sets and Test Sets </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Use-Judgment-in-Defining-Test-Sets">Use Judgment in Defining Test Sets </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#A-Choose-Your-Own-Adventure-moment">A Choose Your Own Adventure moment </a></li>
+<li class="toc-entry toc-h2"><a href="#Questionnaire">Questionnaire </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Further-Research">Further Research </a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul><!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
@@ -117,31 +179,25 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
+<div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">-</span> <span class="n">toc</span><span class="p">:</span> <span class="n">true</span>
-<span class="o">-</span> <span class="n">branch</span><span class="p">:</span> <span class="n">main</span>
-<span class="o">-</span> <span class="n">badges</span><span class="p">:</span> <span class="n">true</span>
-<span class="o">-</span> <span class="n">comments</span><span class="p">:</span> <span class="n">true</span>
-<span class="o">-</span> <span class="n">author</span><span class="p">:</span> <span class="n">Brandon</span> <span class="n">Williams</span>
-<span class="o">-</span> <span class="n">categories</span><span class="p">:</span> <span class="p">[</span><span class="n">fastpages</span><span class="p">,</span> <span class="n">jupyter</span><span class="p">]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Deep-Learning-Is-for-Everyone">Deep Learning Is for Everyone<a class="anchor-link" href="#Deep-Learning-Is-for-Everyone"> </a></h2><p>"You don't need lots of math, data or expensive computers."</p>
+<h1 id="Your-Deep-Learning-Journey">
+<a class="anchor" href="#Your-Deep-Learning-Journey" aria-hidden="true"><span class="octicon octicon-link"></span></a>Your Deep Learning Journey<a class="anchor-link" href="#Your-Deep-Learning-Journey"> </a>
+</h1>
+<p>This is my third time restarting this <a href="https://course.fast.ai/">course</a>.  I have been struggling to find a way to force myself to stick to it.  I am finally heeding the advice in <a href="https://course.fast.ai/videos/?lesson=3">Lesson 3</a> and starting to try to write a blog about it.  This is a topic that I find deeply fascinating.  If you are interested in Machine Learning I highly recommend checking it out for yourself.  A note on format for this blog.  My plan is to go through each chapter of the <a href="https://www.amazon.com/Deep-Learning-Coders-fastai-PyTorch/dp/1492045527">book</a> and write a blog post on it using the Jupyter Notebook defined for it.</p>
+<p>As discussed in the first lesson this book is written with Jupyter Notebooks. All of the chapters can be found in this github <a href="https://github.com/fastai/fastbook">repo</a>.  I am using the "clean" version which just leaves the headers within the chapters. I will fill in each one with ideas I find interesting or examples of what I learned from it.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Deep-Learning-Is-for-Everyone">
+<a class="anchor" href="#Deep-Learning-Is-for-Everyone" aria-hidden="true"><span class="octicon octicon-link"></span></a>Deep Learning Is for Everyone<a class="anchor-link" href="#Deep-Learning-Is-for-Everyone"> </a>
+</h2>
+<p>"You don't need lots of math, data or expensive computers."</p>
 <p>There are a lot of tools that abstact the need to do a lot of complicated statistics that machine learning is built on. We can leverage those tools to build models that learn how to solve problems at or even above an average human level.</p>
 <p>"We've seen record-braking reults with &lt;50 items of data"</p>
 <p>This isn't sourced in the book, but I think it may be demonstrated later.</p>
@@ -152,71 +208,107 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Neural-Networks:-A-Brief-History">Neural Networks: A Brief History<a class="anchor-link" href="#Neural-Networks:-A-Brief-History"> </a></h2><p>Briefly touches on the initial concecption of a Neural Net in 1943 by Warren McCulloch.  Also references a very influential book Perceptrons writen by Marvin Minsky and Seymour Papert.  The most pivotal work by David Rumelhart, James McClelland, and the Parallel Distributed Processing PDP Research Group in 1986.</p>
+<h2 id="Neural-Networks:-A-Brief-History">
+<a class="anchor" href="#Neural-Networks:-A-Brief-History" aria-hidden="true"><span class="octicon octicon-link"></span></a>Neural Networks: A Brief History<a class="anchor-link" href="#Neural-Networks:-A-Brief-History"> </a>
+</h2>
+<p>Briefly touches on the initial concecption of a Neural Net in 1943 by Warren McCulloch.  Also references a very influential book Perceptrons writen by Marvin Minsky and Seymour Papert.  The most pivotal work by David Rumelhart, James McClelland, and the Parallel Distributed Processing PDP Research Group in 1986.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Who-We-Are">Who We Are<a class="anchor-link" href="#Who-We-Are"> </a></h2><p>Explains who Jeremy Howard and Sylvain Gugger are and what their motivations for creating the book were.</p>
+<h2 id="Who-We-Are">
+<a class="anchor" href="#Who-We-Are" aria-hidden="true"><span class="octicon octicon-link"></span></a>Who We Are<a class="anchor-link" href="#Who-We-Are"> </a>
+</h2>
+<p>Explains who Jeremy Howard and Sylvain Gugger are and what their motivations for creating the book were.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="How-to-Learn-Deep-Learning">How to Learn Deep Learning<a class="anchor-link" href="#How-to-Learn-Deep-Learning"> </a></h2><p>"The basic idea is to teach the whole game. That means that if you’re teaching baseball, you first take people to a baseball game or get them to play it. You don’t teach them how to wind twine to make a baseball from scratch, the physics of a parabola, or the coefficient of friction of a ball on a bat." - David Perkins from Making Learning Whole.</p>
+<h2 id="How-to-Learn-Deep-Learning">
+<a class="anchor" href="#How-to-Learn-Deep-Learning" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to Learn Deep Learning<a class="anchor-link" href="#How-to-Learn-Deep-Learning"> </a>
+</h2>
+<p>"The basic idea is to teach the whole game. That means that if you’re teaching baseball, you first take people to a baseball game or get them to play it. You don’t teach them how to wind twine to make a baseball from scratch, the physics of a parabola, or the coefficient of friction of a ball on a bat." - David Perkins from Making Learning Whole.</p>
 <p>This is probably my favorite metaphor in the book.  It is applicable to so much more than just machine learning.</p>
 <ul>
-<li><p>Teaching the whole game</p>
+<li>
+<p>Teaching the whole game</p>
 </li>
-<li><p>Always teaching through examples</p>
+<li>
+<p>Always teaching through examples</p>
 </li>
-<li><p>Simplifying as much as possible</p>
+<li>
+<p>Simplifying as much as possible</p>
 </li>
-<li><p>Removing barriers</p>
+<li>
+<p>Removing barriers</p>
 </li>
 </ul>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Your-Projects-and-Your-Mindset">Your Projects and Your Mindset<a class="anchor-link" href="#Your-Projects-and-Your-Mindset"> </a></h3><p>Playful and curious.</p>
+<h3 id="Your-Projects-and-Your-Mindset">
+<a class="anchor" href="#Your-Projects-and-Your-Mindset" aria-hidden="true"><span class="octicon octicon-link"></span></a>Your Projects and Your Mindset<a class="anchor-link" href="#Your-Projects-and-Your-Mindset"> </a>
+</h3>
+<p>Playful and curious.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="The-Software:-PyTorch,-fastai,-and-Jupyter-(And-Why-It-Doesn't-Matter)">The Software: PyTorch, fastai, and Jupyter (And Why It Doesn't Matter)<a class="anchor-link" href="#The-Software:-PyTorch,-fastai,-and-Jupyter-(And-Why-It-Doesn't-Matter)"> </a></h2><p>These are just easiest they have found to use and they are free.</p>
+<h2 id="The-Software:-PyTorch,-fastai,-and-Jupyter-(And-Why-It-Doesn't-Matter)">
+<a class="anchor" href="#The-Software:-PyTorch,-fastai,-and-Jupyter-(And-Why-It-Doesn't-Matter)" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Software: PyTorch, fastai, and Jupyter (And Why It Doesn't Matter)<a class="anchor-link" href="#The-Software:-PyTorch,-fastai,-and-Jupyter-(And-Why-It-Doesn't-Matter)"> </a>
+</h2>
+<p>These are just easiest they have found to use and they are free.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Your-First-Model">Your First Model<a class="anchor-link" href="#Your-First-Model"> </a></h2><p>"It is crucial that you run your own experiments in parallel with this book in order to learn." - Sylvain</p>
+<h2 id="Your-First-Model">
+<a class="anchor" href="#Your-First-Model" aria-hidden="true"><span class="octicon octicon-link"></span></a>Your First Model<a class="anchor-link" href="#Your-First-Model"> </a>
+</h2>
+<p>"It is crucial that you run your own experiments in parallel with this book in order to learn." - Sylvain</p>
 <p>They cover basic setup of a GPU Deep Learning Server.  Why you should avoid buying your own.  It is definately doable, but it is "distracting."  To continue the baseball methaphor I think this would fall under building the baseball rather than playing the game.</p>
 <p>They also cover what a GPU is and why it is better than a CPU at the math the models will use to do the learning.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Getting-a-GPU-Deep-Learning-Server">Getting a GPU Deep Learning Server<a class="anchor-link" href="#Getting-a-GPU-Deep-Learning-Server"> </a></h3><p>The list of recommended servers is on the <a href="https://course.fast.ai">book's website</a> under "Notebook Servers."  The three they have listed currently are Google's Colab, Gradient PaperSpace, and AWS Sagemaker.</p>
+<h3 id="Getting-a-GPU-Deep-Learning-Server">
+<a class="anchor" href="#Getting-a-GPU-Deep-Learning-Server" aria-hidden="true"><span class="octicon octicon-link"></span></a>Getting a GPU Deep Learning Server<a class="anchor-link" href="#Getting-a-GPU-Deep-Learning-Server"> </a>
+</h3>
+<p>The list of recommended servers is on the <a href="https://course.fast.ai">book's website</a> under "Notebook Servers."  The three they have listed currently are Google's Colab, Gradient PaperSpace, and AWS Sagemaker.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Running-Your-First-Notebook">Running Your First Notebook<a class="anchor-link" href="#Running-Your-First-Notebook"> </a></h3><p>Below is the actual Python code needed to build our first model.  I added some comments to disambiguate what each piece is doing.</p>
+<h3 id="Running-Your-First-Notebook">
+<a class="anchor" href="#Running-Your-First-Notebook" aria-hidden="true"><span class="octicon octicon-link"></span></a>Running Your First Notebook<a class="anchor-link" href="#Running-Your-First-Notebook"> </a>
+</h3>
+<p>Below is the actual Python code needed to build our first model.  I added some comments to disambiguate what each piece is doing.</p>
 
 </div>
 </div>
@@ -232,21 +324,21 @@ window.onload = wrap_img;
 <span class="kn">from</span> <span class="nn">fastai.vision.all</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="c1"># This is where all the images of pets are stored</span>
-<span class="n">path</span> <span class="o">=</span> <span class="n">untar_data</span><span class="p">(</span><span class="n">URLs</span><span class="o">.</span><span class="n">PETS</span><span class="p">)</span><span class="o">/</span><span class="s1">&#39;images&#39;</span>
+<span class="n">path</span> <span class="o">=</span> <span class="n">untar_data</span><span class="p">(</span><span class="n">URLs</span><span class="o">.</span><span class="n">PETS</span><span class="p">)</span><span class="o">/</span><span class="s1">'images'</span>
 
 <span class="c1"># A simple function to check if an image is a Cat.  This particular data set is label by using an uppercase letter for an image of cat.</span>
 <span class="k">def</span> <span class="nf">is_cat</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> <span class="k">return</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">isupper</span><span class="p">()</span>
 
-<span class="c1"># This is organizing the data and loading it into memory on the GPU.  &quot;valid_pct&quot; is telling the function to reserve 20% of the images for learning validation.  &quot;item_tfms&quot; is resizing all of the images to be the same size to keep the input consistent.</span>
+<span class="c1"># This is organizing the data and loading it into memory on the GPU.  "valid_pct" is telling the function to reserve 20% of the images for learning validation.  "item_tfms" is resizing all of the images to be the same size to keep the input consistent.</span>
 <span class="n">dls</span> <span class="o">=</span> <span class="n">ImageDataLoaders</span><span class="o">.</span><span class="n">from_name_func</span><span class="p">(</span>
     <span class="n">path</span><span class="p">,</span> <span class="n">get_image_files</span><span class="p">(</span><span class="n">path</span><span class="p">),</span> <span class="n">valid_pct</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span>
     <span class="n">label_func</span><span class="o">=</span><span class="n">is_cat</span><span class="p">,</span> <span class="n">item_tfms</span><span class="o">=</span><span class="n">Resize</span><span class="p">(</span><span class="mi">224</span><span class="p">))</span>
 
-<span class="c1"># &quot;cnn_learner&quot; is our learning function it is using a convolutional neural networks (cnn) with a resnet34 architecture.  The error_rate is how accurate the model is at predicting whether or not the image is a cat.</span>
+<span class="c1"># "cnn_learner" is our learning function it is using a convolutional neural networks (cnn) with a resnet34 architecture.  The error_rate is how accurate the model is at predicting whether or not the image is a cat.</span>
 <span class="n">learn</span> <span class="o">=</span> <span class="n">cnn_learner</span><span class="p">(</span><span class="n">dls</span><span class="p">,</span> <span class="n">resnet34</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="n">error_rate</span><span class="p">)</span>
 
 <span class="c1"># This fine tunes the model</span>
-<span class="c1"># &quot;This is the key to deep learning — determining how to fit the parameters of a model to get it to solve your problem. To fit a model, we have to provide at least one piece of information: how many times to look at each image (known as number of epochs). The number of epochs you select will largely depend on how much time you have available, and how long you find it takes in practice to fit your model. If you select a number that is too small, you can always train for more epochs later.&quot;</span>
+<span class="c1"># "This is the key to deep learning — determining how to fit the parameters of a model to get it to solve your problem. To fit a model, we have to provide at least one piece of information: how many times to look at each image (known as number of epochs). The number of epochs you select will largely depend on how much time you have available, and how long you find it takes in practice to fit your model. If you select a number that is too small, you can always train for more epochs later."</span>
 <span class="n">learn</span><span class="o">.</span><span class="n">fine_tune</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 
@@ -257,16 +349,24 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Sidebar:-This-Book-Was-Written-in-Jupyter-Notebooks">Sidebar: This Book Was Written in Jupyter Notebooks<a class="anchor-link" href="#Sidebar:-This-Book-Was-Written-in-Jupyter-Notebooks"> </a></h3><p>Brief sidebar on what Jupyter Notebooks are.  It is an interactive python REPL (Read Evaluate Print Loop) with markdown support.</p>
+<h3 id="Sidebar:-This-Book-Was-Written-in-Jupyter-Notebooks">
+<a class="anchor" href="#Sidebar:-This-Book-Was-Written-in-Jupyter-Notebooks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sidebar: This Book Was Written in Jupyter Notebooks<a class="anchor-link" href="#Sidebar:-This-Book-Was-Written-in-Jupyter-Notebooks"> </a>
+</h3>
+<p>Brief sidebar on what Jupyter Notebooks are.  It is an interactive python REPL (Read Evaluate Print Loop) with markdown support.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="End-sidebar">End sidebar<a class="anchor-link" href="#End-sidebar"> </a></h3><p>The stuff below can only be run on a running notebook.</p>
+<h3 id="End-sidebar">
+<a class="anchor" href="#End-sidebar" aria-hidden="true"><span class="octicon octicon-link"></span></a>End sidebar<a class="anchor-link" href="#End-sidebar"> </a>
+</h3>
+<p>The stuff below can only be run on a running notebook.</p>
 
 </div>
 </div>
@@ -298,8 +398,8 @@ window.onload = wrap_img;
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">img</span> <span class="o">=</span> <span class="n">PILImage</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">uploader</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 <span class="n">is_cat</span><span class="p">,</span><span class="n">_</span><span class="p">,</span><span class="n">probs</span> <span class="o">=</span> <span class="n">learn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Is this a cat?: </span><span class="si">{</span><span class="n">is_cat</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Probability it&#39;s a cat: </span><span class="si">{</span><span class="n">probs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">item</span><span class="p">()</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Is this a cat?: </span><span class="si">{</span><span class="n">is_cat</span><span class="si">}</span><span class="s2">."</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Probability it's a cat: </span><span class="si">{</span><span class="n">probs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">item</span><span class="p">()</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -309,9 +409,13 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="What-Is-Machine-Learning?">What Is Machine Learning?<a class="anchor-link" href="#What-Is-Machine-Learning?"> </a></h3><p>"Arthur Samuel started working on a different way to get computers to complete tasks, which he called machine learning. In his classic 1962 essay “Artificial Intelligence: A Frontier of Automation,” he wrote: Programming a computer for such computations is, at best, a difficult task, not primarily because of any inherent complexity in the computer itself but, rather, because of the need to spell out every minute step of the process in the most exasperating detail. Computers, as any programmer will tell you, are giant morons, not giant brains.</p>
+<h3 id="What-Is-Machine-Learning?">
+<a class="anchor" href="#What-Is-Machine-Learning?" aria-hidden="true"><span class="octicon octicon-link"></span></a>What Is Machine Learning?<a class="anchor-link" href="#What-Is-Machine-Learning?"> </a>
+</h3>
+<p>"Arthur Samuel started working on a different way to get computers to complete tasks, which he called machine learning. In his classic 1962 essay “Artificial Intelligence: A Frontier of Automation,” he wrote: Programming a computer for such computations is, at best, a difficult task, not primarily because of any inherent complexity in the computer itself but, rather, because of the need to spell out every minute step of the process in the most exasperating detail. Computers, as any programmer will tell you, are giant morons, not giant brains.</p>
 <p>Suppose we arrange for some automatic means of testing the effectiveness of any current weight assignment in terms of actual performance and provide a mechanism for altering the weight assignment so as to maximize the performance. We need not go into the details of such a procedure to see that it could be made entirely automatic and to see that a machine so programmed would “learn” from its experience.</p>
 <p>There are a number of powerful concepts embedded in this short statement:</p>
 <ul>
@@ -324,9 +428,13 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="What-Is-a-Neural-Network?">What Is a Neural Network?<a class="anchor-link" href="#What-Is-a-Neural-Network?"> </a></h3><p>"What we would like is some kind of function that is so flexible that it could be used to solve any given problem, just by varying its weights.
+<h3 id="What-Is-a-Neural-Network?">
+<a class="anchor" href="#What-Is-a-Neural-Network?" aria-hidden="true"><span class="octicon octicon-link"></span></a>What Is a Neural Network?<a class="anchor-link" href="#What-Is-a-Neural-Network?"> </a>
+</h3>
+<p>"What we would like is some kind of function that is so flexible that it could be used to solve any given problem, just by varying its weights.
 ...
 But what about that process? One could imagine that you might need to find a new “mechanism” for automatically updating weight for every problem. This would be laborious. What we’d like here as well is a completely general way to update the weights of a neural network, to make it improve at any given task. Conveniently, this also exists!</p>
 <p>This is called stochastic gradient descent (SGD)."</p>
@@ -335,9 +443,13 @@ But what about that process? One could imagine that you might need to find a new
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="A-Bit-of-Deep-Learning-Jargon">A Bit of Deep Learning Jargon<a class="anchor-link" href="#A-Bit-of-Deep-Learning-Jargon"> </a></h3><ul>
+<h3 id="A-Bit-of-Deep-Learning-Jargon">
+<a class="anchor" href="#A-Bit-of-Deep-Learning-Jargon" aria-hidden="true"><span class="octicon octicon-link"></span></a>A Bit of Deep Learning Jargon<a class="anchor-link" href="#A-Bit-of-Deep-Learning-Jargon"> </a>
+</h3>
+<ul>
 <li>The functional form of the model is called its architecture (but be careful — sometimes people use model as a synonym of architecture, so this can get confusing).  </li>
 <li>The weights are called parameters.</li>
 <li>The predictions are calculated from the independent variable, which is the data not including the labels.</li>
@@ -349,9 +461,13 @@ But what about that process? One could imagine that you might need to find a new
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Limitations-Inherent-To-Machine-Learning">Limitations Inherent To Machine Learning<a class="anchor-link" href="#Limitations-Inherent-To-Machine-Learning"> </a></h3><p>This is left in the clean version of the book on the fastbook repo.  I think it is important to leave it here as well.</p>
+<h3 id="Limitations-Inherent-To-Machine-Learning">
+<a class="anchor" href="#Limitations-Inherent-To-Machine-Learning" aria-hidden="true"><span class="octicon octicon-link"></span></a>Limitations Inherent To Machine Learning<a class="anchor-link" href="#Limitations-Inherent-To-Machine-Learning"> </a>
+</h3>
+<p>This is left in the clean version of the book on the fastbook repo.  I think it is important to leave it here as well.</p>
 <p>From this picture we can now see some fundamental things about training a deep learning model:</p>
 <ul>
 <li>A model cannot be created without data.</li>
@@ -365,34 +481,50 @@ But what about that process? One could imagine that you might need to find a new
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="How-Our-Image-Recognizer-Works">How Our Image Recognizer Works<a class="anchor-link" href="#How-Our-Image-Recognizer-Works"> </a></h3><p>Does essentailly what I did with the code comments in the Running Your First Notebook section, but with a bit more detail.  They touch on the idea of "Overfitting" a model to the data.  If a model is overfit to the data it will give bad predictions on new data.</p>
+<h3 id="How-Our-Image-Recognizer-Works">
+<a class="anchor" href="#How-Our-Image-Recognizer-Works" aria-hidden="true"><span class="octicon octicon-link"></span></a>How Our Image Recognizer Works<a class="anchor-link" href="#How-Our-Image-Recognizer-Works"> </a>
+</h3>
+<p>Does essentailly what I did with the code comments in the Running Your First Notebook section, but with a bit more detail.  They touch on the idea of "Overfitting" a model to the data.  If a model is overfit to the data it will give bad predictions on new data.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="What-Our-Image-Recognizer-Learned">What Our Image Recognizer Learned<a class="anchor-link" href="#What-Our-Image-Recognizer-Learned"> </a></h3>
+<h3 id="What-Our-Image-Recognizer-Learned">
+<a class="anchor" href="#What-Our-Image-Recognizer-Learned" aria-hidden="true"><span class="octicon octicon-link"></span></a>What Our Image Recognizer Learned<a class="anchor-link" href="#What-Our-Image-Recognizer-Learned"> </a>
+</h3>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Image-Recognizers-Can-Tackle-Non-Image-Tasks">Image Recognizers Can Tackle Non-Image Tasks<a class="anchor-link" href="#Image-Recognizers-Can-Tackle-Non-Image-Tasks"> </a></h3>
+<h3 id="Image-Recognizers-Can-Tackle-Non-Image-Tasks">
+<a class="anchor" href="#Image-Recognizers-Can-Tackle-Non-Image-Tasks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Image Recognizers Can Tackle Non-Image Tasks<a class="anchor-link" href="#Image-Recognizers-Can-Tackle-Non-Image-Tasks"> </a>
+</h3>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Jargon-Recap">Jargon Recap<a class="anchor-link" href="#Jargon-Recap"> </a></h3>
+<h3 id="Jargon-Recap">
+<a class="anchor" href="#Jargon-Recap" aria-hidden="true"><span class="octicon octicon-link"></span></a>Jargon Recap<a class="anchor-link" href="#Jargon-Recap"> </a>
+</h3>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Deep-Learning-Is-Not-Just-for-Image-Classification">Deep Learning Is Not Just for Image Classification<a class="anchor-link" href="#Deep-Learning-Is-Not-Just-for-Image-Classification"> </a></h2>
+<h2 id="Deep-Learning-Is-Not-Just-for-Image-Classification">
+<a class="anchor" href="#Deep-Learning-Is-Not-Just-for-Image-Classification" aria-hidden="true"><span class="octicon octicon-link"></span></a>Deep Learning Is Not Just for Image Classification<a class="anchor-link" href="#Deep-Learning-Is-Not-Just-for-Image-Classification"> </a>
+</h2>
 </div>
 </div>
 </div>
@@ -405,9 +537,9 @@ But what about that process? One could imagine that you might need to find a new
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">path</span> <span class="o">=</span> <span class="n">untar_data</span><span class="p">(</span><span class="n">URLs</span><span class="o">.</span><span class="n">CAMVID_TINY</span><span class="p">)</span>
 <span class="n">dls</span> <span class="o">=</span> <span class="n">SegmentationDataLoaders</span><span class="o">.</span><span class="n">from_label_func</span><span class="p">(</span>
-    <span class="n">path</span><span class="p">,</span> <span class="n">bs</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">fnames</span> <span class="o">=</span> <span class="n">get_image_files</span><span class="p">(</span><span class="n">path</span><span class="o">/</span><span class="s2">&quot;images&quot;</span><span class="p">),</span>
-    <span class="n">label_func</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">o</span><span class="p">:</span> <span class="n">path</span><span class="o">/</span><span class="s1">&#39;labels&#39;</span><span class="o">/</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">o</span><span class="o">.</span><span class="n">stem</span><span class="si">}</span><span class="s1">_P</span><span class="si">{</span><span class="n">o</span><span class="o">.</span><span class="n">suffix</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
-    <span class="n">codes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">path</span><span class="o">/</span><span class="s1">&#39;codes.txt&#39;</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">str</span><span class="p">)</span>
+    <span class="n">path</span><span class="p">,</span> <span class="n">bs</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">fnames</span> <span class="o">=</span> <span class="n">get_image_files</span><span class="p">(</span><span class="n">path</span><span class="o">/</span><span class="s2">"images"</span><span class="p">),</span>
+    <span class="n">label_func</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">o</span><span class="p">:</span> <span class="n">path</span><span class="o">/</span><span class="s1">'labels'</span><span class="o">/</span><span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">o</span><span class="o">.</span><span class="n">stem</span><span class="si">}</span><span class="s1">_P</span><span class="si">{</span><span class="n">o</span><span class="o">.</span><span class="n">suffix</span><span class="si">}</span><span class="s1">'</span><span class="p">,</span>
+    <span class="n">codes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">path</span><span class="o">/</span><span class="s1">'codes.txt'</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">str</span><span class="p">)</span>
 <span class="p">)</span>
 
 <span class="n">learn</span> <span class="o">=</span> <span class="n">unet_learner</span><span class="p">(</span><span class="n">dls</span><span class="p">,</span> <span class="n">resnet34</span><span class="p">)</span>
@@ -447,7 +579,7 @@ But what about that process? One could imagine that you might need to find a new
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">fastai.text.all</span> <span class="kn">import</span> <span class="o">*</span>
 
-<span class="n">dls</span> <span class="o">=</span> <span class="n">TextDataLoaders</span><span class="o">.</span><span class="n">from_folder</span><span class="p">(</span><span class="n">untar_data</span><span class="p">(</span><span class="n">URLs</span><span class="o">.</span><span class="n">IMDB</span><span class="p">),</span> <span class="n">valid</span><span class="o">=</span><span class="s1">&#39;test&#39;</span><span class="p">)</span>
+<span class="n">dls</span> <span class="o">=</span> <span class="n">TextDataLoaders</span><span class="o">.</span><span class="n">from_folder</span><span class="p">(</span><span class="n">untar_data</span><span class="p">(</span><span class="n">URLs</span><span class="o">.</span><span class="n">IMDB</span><span class="p">),</span> <span class="n">valid</span><span class="o">=</span><span class="s1">'test'</span><span class="p">)</span>
 <span class="n">learn</span> <span class="o">=</span> <span class="n">text_classifier_learner</span><span class="p">(</span><span class="n">dls</span><span class="p">,</span> <span class="n">AWD_LSTM</span><span class="p">,</span> <span class="n">drop_mult</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="n">accuracy</span><span class="p">)</span>
 <span class="n">learn</span><span class="o">.</span><span class="n">fine_tune</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mf">1e-2</span><span class="p">)</span>
 </pre></div>
@@ -459,7 +591,8 @@ But what about that process? One could imagine that you might need to find a new
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>If you hit a "CUDA out of memory error" after running this cell, click on the menu Kernel, then restart. Instead of executing the cell above, copy and paste the following code in it:</p>
 
@@ -480,7 +613,7 @@ learn.fine_tune(4, 1e-2)</code></pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">learn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="s2">&quot;I really liked that movie!&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">learn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="s2">"I really liked that movie!"</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -490,15 +623,21 @@ learn.fine_tune(4, 1e-2)</code></pre>
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Sidebar:-The-Order-Matters">Sidebar: The Order Matters<a class="anchor-link" href="#Sidebar:-The-Order-Matters"> </a></h3>
+<h3 id="Sidebar:-The-Order-Matters">
+<a class="anchor" href="#Sidebar:-The-Order-Matters" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sidebar: The Order Matters<a class="anchor-link" href="#Sidebar:-The-Order-Matters"> </a>
+</h3>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="End-sidebar">End sidebar<a class="anchor-link" href="#End-sidebar"> </a></h3>
+<h3 id="End-sidebar">
+<a class="anchor" href="#End-sidebar" aria-hidden="true"><span class="octicon octicon-link"></span></a>End sidebar<a class="anchor-link" href="#End-sidebar"> </a>
+</h3>
 </div>
 </div>
 </div>
@@ -512,10 +651,10 @@ learn.fine_tune(4, 1e-2)</code></pre>
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">fastai.tabular.all</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="n">path</span> <span class="o">=</span> <span class="n">untar_data</span><span class="p">(</span><span class="n">URLs</span><span class="o">.</span><span class="n">ADULT_SAMPLE</span><span class="p">)</span>
 
-<span class="n">dls</span> <span class="o">=</span> <span class="n">TabularDataLoaders</span><span class="o">.</span><span class="n">from_csv</span><span class="p">(</span><span class="n">path</span><span class="o">/</span><span class="s1">&#39;adult.csv&#39;</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="n">path</span><span class="p">,</span> <span class="n">y_names</span><span class="o">=</span><span class="s2">&quot;salary&quot;</span><span class="p">,</span>
-    <span class="n">cat_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;workclass&#39;</span><span class="p">,</span> <span class="s1">&#39;education&#39;</span><span class="p">,</span> <span class="s1">&#39;marital-status&#39;</span><span class="p">,</span> <span class="s1">&#39;occupation&#39;</span><span class="p">,</span>
-                 <span class="s1">&#39;relationship&#39;</span><span class="p">,</span> <span class="s1">&#39;race&#39;</span><span class="p">],</span>
-    <span class="n">cont_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="s1">&#39;fnlwgt&#39;</span><span class="p">,</span> <span class="s1">&#39;education-num&#39;</span><span class="p">],</span>
+<span class="n">dls</span> <span class="o">=</span> <span class="n">TabularDataLoaders</span><span class="o">.</span><span class="n">from_csv</span><span class="p">(</span><span class="n">path</span><span class="o">/</span><span class="s1">'adult.csv'</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="n">path</span><span class="p">,</span> <span class="n">y_names</span><span class="o">=</span><span class="s2">"salary"</span><span class="p">,</span>
+    <span class="n">cat_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'workclass'</span><span class="p">,</span> <span class="s1">'education'</span><span class="p">,</span> <span class="s1">'marital-status'</span><span class="p">,</span> <span class="s1">'occupation'</span><span class="p">,</span>
+                 <span class="s1">'relationship'</span><span class="p">,</span> <span class="s1">'race'</span><span class="p">],</span>
+    <span class="n">cont_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'age'</span><span class="p">,</span> <span class="s1">'fnlwgt'</span><span class="p">,</span> <span class="s1">'education-num'</span><span class="p">],</span>
     <span class="n">procs</span> <span class="o">=</span> <span class="p">[</span><span class="n">Categorify</span><span class="p">,</span> <span class="n">FillMissing</span><span class="p">,</span> <span class="n">Normalize</span><span class="p">])</span>
 
 <span class="n">learn</span> <span class="o">=</span> <span class="n">tabular_learner</span><span class="p">(</span><span class="n">dls</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="n">accuracy</span><span class="p">)</span>
@@ -554,7 +693,7 @@ learn.fine_tune(4, 1e-2)</code></pre>
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">fastai.collab</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="n">path</span> <span class="o">=</span> <span class="n">untar_data</span><span class="p">(</span><span class="n">URLs</span><span class="o">.</span><span class="n">ML_SAMPLE</span><span class="p">)</span>
-<span class="n">dls</span> <span class="o">=</span> <span class="n">CollabDataLoaders</span><span class="o">.</span><span class="n">from_csv</span><span class="p">(</span><span class="n">path</span><span class="o">/</span><span class="s1">&#39;ratings.csv&#39;</span><span class="p">)</span>
+<span class="n">dls</span> <span class="o">=</span> <span class="n">CollabDataLoaders</span><span class="o">.</span><span class="n">from_csv</span><span class="p">(</span><span class="n">path</span><span class="o">/</span><span class="s1">'ratings.csv'</span><span class="p">)</span>
 <span class="n">learn</span> <span class="o">=</span> <span class="n">collab_learner</span><span class="p">(</span><span class="n">dls</span><span class="p">,</span> <span class="n">y_range</span><span class="o">=</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">5.5</span><span class="p">))</span>
 <span class="n">learn</span><span class="o">.</span><span class="n">fine_tune</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
@@ -583,43 +722,62 @@ learn.fine_tune(4, 1e-2)</code></pre>
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Sidebar:-Datasets:-Food-for-Models">Sidebar: Datasets: Food for Models<a class="anchor-link" href="#Sidebar:-Datasets:-Food-for-Models"> </a></h3>
+<h3 id="Sidebar:-Datasets:-Food-for-Models">
+<a class="anchor" href="#Sidebar:-Datasets:-Food-for-Models" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sidebar: Datasets: Food for Models<a class="anchor-link" href="#Sidebar:-Datasets:-Food-for-Models"> </a>
+</h3>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="End-sidebar">End sidebar<a class="anchor-link" href="#End-sidebar"> </a></h3>
+<h3 id="End-sidebar">
+<a class="anchor" href="#End-sidebar" aria-hidden="true"><span class="octicon octicon-link"></span></a>End sidebar<a class="anchor-link" href="#End-sidebar"> </a>
+</h3>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Validation-Sets-and-Test-Sets">Validation Sets and Test Sets<a class="anchor-link" href="#Validation-Sets-and-Test-Sets"> </a></h2>
+<h2 id="Validation-Sets-and-Test-Sets">
+<a class="anchor" href="#Validation-Sets-and-Test-Sets" aria-hidden="true"><span class="octicon octicon-link"></span></a>Validation Sets and Test Sets<a class="anchor-link" href="#Validation-Sets-and-Test-Sets"> </a>
+</h2>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Use-Judgment-in-Defining-Test-Sets">Use Judgment in Defining Test Sets<a class="anchor-link" href="#Use-Judgment-in-Defining-Test-Sets"> </a></h3>
+<h3 id="Use-Judgment-in-Defining-Test-Sets">
+<a class="anchor" href="#Use-Judgment-in-Defining-Test-Sets" aria-hidden="true"><span class="octicon octicon-link"></span></a>Use Judgment in Defining Test Sets<a class="anchor-link" href="#Use-Judgment-in-Defining-Test-Sets"> </a>
+</h3>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="A-Choose-Your-Own-Adventure-moment">A <em>Choose Your Own Adventure</em> moment<a class="anchor-link" href="#A-Choose-Your-Own-Adventure-moment"> </a></h2>
+<h2 id="A-Choose-Your-Own-Adventure-moment">
+<a class="anchor" href="#A-Choose-Your-Own-Adventure-moment" aria-hidden="true"><span class="octicon octicon-link"></span></a>A <em>Choose Your Own Adventure</em> moment<a class="anchor-link" href="#A-Choose-Your-Own-Adventure-moment"> </a>
+</h2>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Questionnaire">Questionnaire<a class="anchor-link" href="#Questionnaire"> </a></h2>
+<h2 id="Questionnaire">
+<a class="anchor" href="#Questionnaire" aria-hidden="true"><span class="octicon octicon-link"></span></a>Questionnaire<a class="anchor-link" href="#Questionnaire"> </a>
+</h2>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>It can be hard to know in pages and pages of prose what the key things are that you really need to focus on and remember. So, we've prepared a list of questions and suggested steps to complete at the end of each chapter. All the answers are in the text of the chapter, so if you're not sure about anything here, reread that part of the text and make sure you understand it. Answers to all these questions are also available on the <a href="https://book.fast.ai">book's website</a>. You can also visit <a href="https://forums.fast.ai">the forums</a> if you get stuck to get help from other folks studying this material.</p>
 <p>For more questions, including detailed answers and links to the video timeline, have a look at Radek Osmulski's <a href="http://aiquizzes.com/howto">aiquizzes</a>.</p>
@@ -627,10 +785,12 @@ learn.fine_tune(4, 1e-2)</code></pre>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ol>
-<li><p>Do you need these for deep learning?</p>
+<li>
+<p>Do you need these for deep learning?</p>
 <ul>
 <li>Lots of math T / F</li>
 <li>Lots of data T / F</li>
@@ -638,7 +798,8 @@ learn.fine_tune(4, 1e-2)</code></pre>
 <li>A PhD T / F</li>
 </ul>
 </li>
-<li><p>Name five areas where deep learning is now the best in the world.</p>
+<li>
+<p>Name five areas where deep learning is now the best in the world.</p>
 </li>
 <li>What was the name of the first device that was based on the principle of the artificial neuron?</li>
 <li>Based on the book of the same name, what are the requirements for parallel distributed processing (PDP)?</li>
@@ -676,20 +837,25 @@ learn.fine_tune(4, 1e-2)</code></pre>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Further-Research">Further Research<a class="anchor-link" href="#Further-Research"> </a></h3>
+<h3 id="Further-Research">
+<a class="anchor" href="#Further-Research" aria-hidden="true"><span class="octicon octicon-link"></span></a>Further Research<a class="anchor-link" href="#Further-Research"> </a>
+</h3>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Each chapter also has a "Further Research" section that poses questions that aren't fully answered in the text, or gives more advanced assignments. Answers to these questions aren't on the book's website; you'll need to do your own research!</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ol>
 <li>Why is a GPU useful for deep learning? How is a CPU different, and why is it less effective for deep learning?</li>
@@ -703,7 +869,15 @@ learn.fine_tune(4, 1e-2)</code></pre>
 
 
 
-  </div><a class="u-url" href="/2021/03/13/01_intro.html" hidden></a>
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="bweez/fastpages-blog"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/fastpages/jupyter/2021/03/13/01_intro.html" hidden></a>
 </article>
       </div>
     </main><footer class="site-footer h-card">
